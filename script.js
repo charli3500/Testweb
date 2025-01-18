@@ -1,7 +1,7 @@
-document.getElementById("sendweb").addEventListener("click", function() {
+document.getElementById("irofb5").addEventListener("click", function() {
     const webhookURL = "https://discord.com/api/webhooks/1330153787788361739/t-XAdD4S2W9JM7QLmLZ_LDBGjmyFS1heGCs6HA3zlSWljkwE8tE4eZ5k6mEhCRZWvtK6";
     const messageContent = {
-        content: document.getElementById("SendText").innerText
+        content: document.getElementById("SendText").value
     };
 
     fetch(webhookURL, {
