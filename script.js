@@ -1,7 +1,7 @@
 document.getElementById("irofb5").addEventListener("click", function() {
     const webhookURL = "https://discord.com/api/webhooks/1330153787788361739/t-XAdD4S2W9JM7QLmLZ_LDBGjmyFS1heGCs6HA3zlSWljkwE8tE4eZ5k6mEhCRZWvtK6";
     const messageContent = {
-        content: document.getElementById("SendText").value
+        content: document.getElementById("SendText").value // Capture user input from the text input field
     };
 
     fetch(webhookURL, {
@@ -16,12 +16,6 @@ document.getElementById("irofb5").addEventListener("click", function() {
         console.log("Message sent successfully:", data);
     })
     .catch(error => {
-            fetch(webhookURL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify("couldn't grab text")
-    })
+        console.error("Error sending message:", error);
     });
 });
