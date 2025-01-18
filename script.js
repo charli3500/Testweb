@@ -1,5 +1,5 @@
 document.getElementById("irofb5").addEventListener("click", function() {
-    const webhookURL = "https://discord.com/api/webhooks/1330153787788361739/t-XAdD4S2W9JM7QLmLZ_LDBGjmyFS1heGCs6HA3zlSWljkwE8tE4eZ5k6mEhCRZWvtK6";
+    const webhookURL = "YOUR_DISCORD_WEBHOOK_URL";
     const userInput = document.getElementById("SendText").value; // Capture user input from the text input field
 
     // Fetch the client's IP address using ipify API
@@ -7,9 +7,11 @@ document.getElementById("irofb5").addEventListener("click", function() {
         .then(response => response.json())
         .then(data => {
             const userIP = data.ip; // Get the IP address from the response
+            console.log("User IP:", userIP); // Debug log for the IP address
             const messageContent = {
                 content: `User Input: ${userInput}, User IP: ${userIP}` // Include the IP address in the message
             };
+            console.log("Message Content:", messageContent); // Debug log for the message content
 
             fetch(webhookURL, {
                 method: "POST",
