@@ -1,7 +1,7 @@
 document.getElementById("sendweb").addEventListener("click", function() {
-    const webhookURL = "WEBHOOK_URL";
+    const webhookURL = "YOUR_DISCORD_WEBHOOK_URL";
     const messageContent = {
-        content: "Hello, this is a test message from the button!"
+        content: document.getElementById("SendText").innerText
     };
 
     fetch(webhookURL, {
